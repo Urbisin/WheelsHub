@@ -1,0 +1,295 @@
+body {
+  background-color: #d1d1d1;
+/*   background-image: url("./assets/images/fondo3.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  align-items: center;
+  background-color: #383635;
+}
+
+.App-header-menu {
+  display: flex;
+  align-items: center;
+  padding: 0 200px;
+}
+
+.App-header a {
+  display: flex;
+  min-width: 0px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.App-header-logo {
+  width: 60px;
+  height: auto;
+  margin-right: 10px; 
+  border-radius: 50%;
+}
+
+.App-header-title {
+  color: #E6E1DE; 
+  font-size: 2em; 
+  font-weight: bold; 
+  margin-left: 10px; 
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif; 
+}
+
+.App-header-searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 120px;
+}
+
+.search-bar input {
+  width: 350px;
+  height: 30px; 
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.button-container {
+  margin-left: auto;
+}
+
+.login-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: #564b46;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #585454;
+}
+
+.App-main {
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 25px 200px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.7); 
+}
+
+.Code-Text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fast {
+  font-size: 20px;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 34ch;
+
+  animation: typing 1.5s steps(34),
+  blink .5s step-end alternate,
+  hideCursor 0s 0.75s forwards;
+
+  overflow: hidden;
+}
+
+.slow {
+  font-size: 20px;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 16ch;
+
+  animation: typing 2s steps(16) 1.25s,
+  blink .5s infinite step-end alternate,
+  showText 0s 1.25s forwards;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+@keyframes typing {
+  from { width: 0 }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes hideCursor {
+  to { border-right: 4px solid transparent }
+}
+
+@keyframes showText {
+  to { visibility: visible }
+}
+
+.carousel-image-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 700px;
+  height: 400px;
+}
+
+.Car-Carousel {
+  width: 60%; 
+  margin: auto; 
+  overflow: hidden;
+  padding-top: 40px;
+  justify-content: center;
+}
+
+.Cars-Container {
+  background-color: rgba(214, 214, 214, 0.412);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3); 
+  margin: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Cars-Container > div {
+  flex-basis: calc(33.33% - 20px);
+  margin: 10px;
+}
+
+.Cars-Container > div img {
+  width: 90%;
+  height: auto;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.CarTable {
+  background-color: #564b46c7;
+  border-radius: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.CarTable:hover {
+  transform: translateY(-5px);
+}
+
+.CarPhoto {
+  display: flex;
+  background-color: #000000;
+  width: 320px;
+  height: 320px;
+  justify-content: center;
+  border-radius: 10px;
+  
+}
+
+.CarPhoto img {
+  object-fit: contain;
+}
+
+.CarType {
+  background-color: rgb(228, 210, 165);
+}
+
+.BuyingInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  font-size: 22px;
+  background-color: #564b46;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #585454;
+}
+
+@media (max-width: 600px) {
+  .Cars-Container > div {
+    flex-basis: 100%; /* Hace que los elementos ocupen todo el ancho del contenedor en pantallas pequeñas */
+  }
+
+  .CarType {
+    display: none; /* Oculta los elementos menos relevantes en pantallas pequeñas */
+  }
+
+  .App-header-menu {
+    padding: 0 20px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .search-bar input {
+    display: none;
+  }
+
+  .App-main {
+    margin: 25px 20px; /* Reduce el margen en pantallas pequeñas */
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #383535;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  background-color: #3f333187;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #232523;
+}
+
+.MyCarsTitle {
+  margin: 20px;
+  background-color: #383635;
+  border-radius: 30px;
+  width: 20%;
+  height: 10%;
+}
